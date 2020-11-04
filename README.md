@@ -144,18 +144,18 @@ chatRef.addChildEventListener(new ChildEventListener() {
 ## Dependence function
 
 - String time=calendar.get(Calendar.HOUR_OF_DAY)+":"+calendar.get(Calendar.MINUTE);
-- 현재 시간을 문자열로
+  - 현재 시간을 문자열로
 
 - MessageItem messageItem= new MessageItem(nickName,message,time,pofileUrl);
-- firebase DB에 저장할 값(MessageItem객체) 설정
+  - firebase DB에 저장할 값(MessageItem객체) 설정
 
 - chatRef.push().setValue(messageItem);
-- 'char'노드에 MessageItem객체를 통해 데이터 삽입
+  - 'char'노드에 MessageItem객체를 통해 데이터 삽입
 
 - InputMethodManager imm=(InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 - imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),0);
-- 소프트키페드 객체 생성 , 소프트키포드 올라와 있는거 숨김
-- https://blog.yena.io/studynote/2017/12/16/Android-HideKeyboard.html
+  - 소프트키페드 객체 생성 , 소프트키포드 올라와 있는거 숨김
+  - https://blog.yena.io/studynote/2017/12/16/Android-HideKeyboard.html
 
 ## Source code
 ```
@@ -214,7 +214,7 @@ public ChatAdapter(ArrayList<MessageItem> messageItems, LayoutInflater layoutInf
 ## Description 
 
 - 어댑터가 나타내는 데이터 세트에있는 항목 수입니다.
-- https://developer.android.com/reference/android/widget/HeaderViewListAdapter#getCount()
+  - https://developer.android.com/reference/android/widget/HeaderViewListAdapter#getCount()
             
 ## Parameter
 
@@ -242,7 +242,7 @@ public int getCount() {
 ## Description 
 
 - 데이터 세트의 지정된 위치와 연관된 데이터 항목을 가져옵니다.
-- https://developer.android.com/reference/android/widget/HeaderViewListAdapter#getItem(int)
+  - https://developer.android.com/reference/android/widget/HeaderViewListAdapter#getItem(int)
             
 ## Parameter
 
@@ -267,12 +267,12 @@ public Object getItem(int position) {
     }
 ```
 
-# getItemId()
+# getView()
 
 ## Description 
 
 - 데이터 세트의 지정된 위치에 데이터를 표시하는View를 가져옵니다.
-- https://developer.android.com/reference/android/widget/Adapter#getView(int,%20android.view.View,%20android.view.ViewGroup)
+  - https://developer.android.com/reference/android/widget/Adapter#getView(int,%20android.view.View,%20android.view.ViewGroup)
             
 ## Parameter
 
@@ -297,11 +297,11 @@ public Object getItem(int position) {
         }else{
             itemView= layoutInflater.inflate(R.layout.other_msgbox,viewGroup,false);
         }
-- 메세지가 자신의 메세지이면 좌측에 다른 사람의 메세지면 우측에 띄움 
+  - 메세지가 자신의 메세지이면 좌측에 다른 사람의 메세지면 우측에 띄움 
 
 - Glide.with(itemView).load(item.getPofileUrl()).into(iv);
-- Glide는 원격 이미지를 가져오고 크기를 조정하고 표시해야하는 거의 모든 경우에도 효과적입니다.
-- https://github.com/bumptech/glide
+  - Glide는 원격 이미지를 가져오고 크기를 조정하고 표시해야하는 거의 모든 경우에도 효과적입니다.
+  - https://github.com/bumptech/glide
 
 ## Source code
 
@@ -338,23 +338,4 @@ public Object getItem(int position) {
     }
 ```
 
-# getView()
-
-## Description 
-
-- 자바스크립트에서 안드로이드 메소드를 인식할 수 있게 설정하는 메소드.
-- 제공된 이름을 사용하여 자바스크립트에서 안드로이드 메소드에 엑세스 할 수 있습니다.
-            
-## Parameter
-
-- 없음
-    
-## Return
-- type : void
-
-- value : 없음
-
-## Dependence function
-
-## Source code
 
