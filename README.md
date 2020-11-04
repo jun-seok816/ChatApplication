@@ -267,6 +267,37 @@ public Object getItem(int position) {
     }
 ```
 
+# getItemId()
+
+## Description 
+
+- 목록에서 지정된 위치와 관련된 행 ID를 가져옵니다.
+  - https://developer.android.com/reference/android/widget/HeaderViewListAdapter#getItemId(int)
+            
+## Parameter
+
+- position
+  - 원하는 행 ID를 가진 어댑터의 데이터 세트 내 항목의 위치.
+    
+## Return
+
+- type : long
+
+- value : 지정된 위치에있는 항목의 ID입니다.
+
+## Dependence function
+
+- 없음
+
+## Source code
+
+```
+ public long getItemId(int position) {
+        return position;
+    }
+```
+
+
 # getView()
 
 ## Description 
