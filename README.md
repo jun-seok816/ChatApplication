@@ -154,7 +154,7 @@ chatRef.addChildEventListener(new ChildEventListener() {
 
 - InputMethodManager imm=(InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 - imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),0);
-  - 소프트키페드 객체 생성 , 소프트키포드 올라와 있는거 숨김
+  - 소프트키패드 객체 생성 , 소프트키패드 올라와 있는거 숨김
   - https://blog.yena.io/studynote/2017/12/16/Android-HideKeyboard.html
 
 ## Source code
